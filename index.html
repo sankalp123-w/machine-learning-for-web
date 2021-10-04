@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+</head>
+<body>
+    <h1>Image classification using MobileNet</h1>
+  <p>The MobileNet model labeled this as <span id="result">...</span> with a confidence of <span id="probability">...</span>.</p>
+  <img src="h.jpg" id="image" width="400"                    />
+    <script>const image = document.getElementById('image'); // The image we want to classify
+        const result = document.getElementById('result'); // The result tag in the HTML
+        const probability = document.getElementById('probability'); // The probability tag in the HTML
+        
+        // Initialize the Image Classifier method with MobileNet
+        ml5.imageClassifier('MobileNet')
+          .then(classifier => classifier.classify(image))
+          .then(results => {
+            result.innerText = results[0].label;
+            probability.innerText = results[0].confidence.toFixed(4);
+          });</script>
+</body>
+</html>

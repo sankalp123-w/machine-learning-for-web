@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <script type="text/javascript" src="scripts/jquery.js"></script>
+		<script src="scripts/p5.js" type="text/javascript"></script>
+		<script src="scripts/p5.dom.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="/style/style.css">
+    <script src="scripts/p5ml.js"></script>
+		<title>ML EMOJI PONG 😎</title>
+
+	</head>
+	<body>
+		<h1 id="loading">TRAINING</h1>
+
+		<div class="sidebar">
+			<p id="title"> ML EMOJI PONG </p>
+
+			<div id="videoContainer">
+				<p id="videoText">Play Here</p>
+				<video id="videoShowRef" src="" muted="true" autoplay crossorigin="anonymous" ></video>
+			</div>
+			<div id="listing">
+				<div id="renderList">
+					<ul id="proList">
+						<li id="🙂"><span id="emoji">🙂 </span> <p id="emojiStatus" data-trained="Normal State"> Train ↝ Normal State</p> </li>
+						<li id="☝"><span id="emoji">☝ </span> <p id="emojiStatus" data-trained="Paddle Left UP"> Train ↝ Paddle Left UP</p> </li>
+						<li id="✋"><span id="emoji">✋ </span> <p id="emojiStatus" data-trained="Paddle Left DOWN"> Train ↝ Paddle Left DOWN</p> </li>
+						<li id="✌"><span id="emoji">✌ </span> <p id="emojiStatus" data-trained="Paddle Right UP"> Train ↝ Paddle Right UP</p> </li>
+						<li id="✊"><span id="emoji">✊ </span> <p id="emojiStatus" data-trained="Paddle Right DOWN"> Train ↝ Paddle Right Down</p> </li>
+						<li id="😛"><span id="emoji">😛 </span> <p id="emojiStatus" data-trained="Reset Game"> Train ↝ Reset Game </p> </li>
+
+
+					</ul>
+				</div>
+			</div>
+			<div id="log"></div>
+		</div>
+
+		<div id="videoLive">
+			<video id="video" muted="true" autoplay crossorigin="anonymous" ></video>
+		</div>
+
+    <div class="k" id="video-container">
+      <video id="my-video" muted="true" autoplay crossorigin="anonymous" width="227" height="227" ></video>
+    </div>
+
+    <script src="/scripts/client.js"></script>
+
+	</body>
+</html>
